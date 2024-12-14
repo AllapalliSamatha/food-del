@@ -1,0 +1,89 @@
+/* Flex Layout for List Items */
+.list {
+    display: flex;
+    flex-direction: column; /* Stack the rows vertically */
+    padding: 10px; /* Reduced padding around the list */
+    max-width: 800px; /* Set max-width to limit the size of the list */
+    margin: 0 auto; /* Center the list */
+  }
+  
+  .list p {
+    font-size: 14px; /* Further reduced font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px; /* Reduced margin between text */
+  }
+  
+  /* Table structure for the list */
+  .list-table {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Reduced space between rows */
+  }
+  
+  .list-table-format {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure items spread out evenly */
+    gap: 10px; /* Space between items */
+    padding: 8px 10px; /* Reduced padding */
+    border: 1px solid #ccc; /* Lighter border color */
+    font-size: 11px; /* Reduced font size */
+    background-color: #f9f9f9; /* Light background for each row */
+    max-width: 100%; /* Ensure each row doesn't exceed container width */
+  }
+  
+  .list-table-format.title {
+    background-color: #e0e0e0; /* Slightly different background for the title row */
+    font-weight: bold;
+  }
+  
+  .list-table-format > p,
+  .list-table-format > img {
+    flex: 1;
+    text-align: center; /* Align text to the center of each column */
+  }
+  
+  .list-table-format img {
+    width: 15px; /* Reduced image size */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .list-table-format > p {
+    padding-left: 8px; /* Space between image and text */
+  }
+  
+  /* Add a smaller "X" button for deletion */
+  .list-table-format .cursor {
+    font-size: 10px; /* Further reduce the size of the "X" */
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Responsive Adjustment for Smaller Screens */
+  @media (max-width: 600px) {
+    .list-table-format {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      gap: 4px; /* Reduced space between items */
+    }
+  
+    .list-table-format img {
+      width: 24px; /* Further reduced image size for smaller screens */
+    }
+  
+    .list-table-format > p {
+      text-align: center; /* Center text on small screens */
+    }
+  
+    .list-table-format {
+      padding: 6px 4px; /* Reduced padding for smaller screens */
+    }
+  
+    /* Adjust "X" size and positioning for small screens */
+    .list-table-format .cursor {
+      font-size: 8px; /* Reduce the font size of "X" */
+      color: red;
+    }
+  }
+  
